@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduGames & AI — Starter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>EduGames & AI — Starter Site</h1>
+    <nav>
+      <button data-target="games">Games</button>
+      <button data-target="ai">AI Tools</button>
+      <button data-target="about">About / For Admins</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="games" class="panel">
+      <h2>Games</h2>
+      <div class="games-grid">
+        <div class="game-card">
+          <h3>Tic‑Tac‑Toe</h3>
+          <div id="ttt" class="game-box"></div>
+          <button id="ttt-reset">Reset</button>
+        </div>
+
+        <div class="game-card">
+          <h3>Snake</h3>
+          <canvas id="snake" width="300" height="300"></canvas>
+          <p>Use arrow keys to move. Eat the red dot.</p>
+          <button id="snake-reset">Restart</button>
+        </div>
+
+        <div class="game-card">
+          <h3>Memory (Matching)</h3>
+          <div id="memory" class="game-box"></div>
+          <button id="memory-reset">Reset</button>
+        </div>
+      </div>
+      <p class="note">This is a small set of classroom-appropriate games. No accounts, no trackers, no ads.</p>
+    </section>
+
+    <section id="ai" class="panel hidden">
+      <h2>AI Tools (Stubs)</h2>
+
+      <div class="ai-card">
+        <h3>Chatbot (UI stub)</h3>
+        <div id="chat" class="chat-box"></div>
+        <form id="chat-form">
+          <input id="chat-input" placeholder="Ask a question (AI disabled in this demo)"/>
+          <button type="submit">Send</button>
+        </form>
+        <p class="small">This is a UI only. To enable a real model, admins should configure a server-side API key (see About / For Admins).</p>
+      </div>
+
+      <div class="ai-card">
+        <h3>Quiz / Flashcard Generator</h3>
+        <textarea id="quiz-text" placeholder="Paste a short paragraph (teacher-provided)"></textarea>
+        <button id="quiz-gen">Generate simple true/false quiz</button>
+        <div id="quiz-output"></div>
+      </div>
+
+      <div class="ai-card">
+        <h3>Essay Helper — Summarizer</h3>
+        <textarea id="essay-text" placeholder="Paste an essay paragraph"></textarea>
+        <button id="essay-summarize">Summarize (stub)</button>
+        <div id="essay-output"></div>
+      </div>
+    </section>
+
+    <section id="about" class="panel hidden">
+      <h2>About / For Admins</h2>
+      <p>Purpose: Educational games and teacher-facing AI tools for classroom activities. No student accounts required. No ads, no third-party trackers.</p>
+
+      <h3>Security & Privacy</h3>
+      <ul>
+        <li>All game logic runs in the browser (no user data transmitted).</li>
+        <li>AI features are disabled by default; enabling requires a server-side API key and whitelisted domains.</li>
+        <li>Suggested deployment: GitHub Pages on a school-owned domain or a school-approved host with HTTPS.</li>
+      </ul>
+
+      <h3>How to enable AI (for IT / Admins)</h3>
+      <ol>
+        <li>Provide a server-side endpoint that holds an API key; the frontend should call your endpoint (never include keys in client-side JS).</li>
+        <li>Recommended: create a school account with your chosen provider and restrict usage to the school domain/IPs.</li>
+        <li>Update the code's sendToAPI() function in script.js to point to your endpoint.</li>
+      </ol>
+
+      <h3>Contact</h3>
+      <p>Site author: [Student or Teacher Name]. Admin contact: [email or team].</p>
+    </section>
+  </main>
+
+  <footer>
+    <small>EduGames & AI — Starter | No tracking, classroom-appropriate content.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

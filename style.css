@@ -1,0 +1,23 @@
+:root{
+  --bg:#f7f9fc; --card:#fff; --accent:#2b6cb0; --muted:#666;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto; margin:0; background:var(--bg); color:#111}
+header{background:var(--accent); color:white; padding:14px 18px; display:flex; align-items:center; justify-content:space-between}
+header h1{font-size:1.1rem; margin:0}
+nav button{margin-left:8px; background:rgba(255,255,255,0.15); color:white; border:0; padding:6px 10px; border-radius:6px; cursor:pointer}
+main{padding:18px; max-width:1000px; margin:18px auto}
+.panel{background:var(--card); padding:16px; border-radius:8px; box-shadow:0 6px 18px rgba(20,30,40,0.06)}
+.hidden{display:none}
+.games-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px}
+.game-card{padding:10px; border:1px solid #eee; border-radius:6px}
+.game-box{display:grid; gap:6px}
+#ttt{display:grid; grid-template-columns:repeat(3,80px); gap:6px}
+#ttt button.cell{width:80px;height:80px;font-size:2rem}
+canvas{background:#111; display:block; margin:8px 0; border-radius:6px}
+.chat-box{border:1px solid #eee; padding:8px; height:200px; overflow:auto; background:#fafafa}
+.ai-card{margin-bottom:12px; padding:8px; border-radius:6px; border:1px solid #eee}
+textarea{width:100%; min-height:80px; margin-top:6px}
+.small{font-size:0.85rem; color:var(--muted)}
+.note{font-size:0.9rem; color:var(--muted); margin-top:8px}
+footer{max-width:1000px;margin:12px auto;color:var(--muted); font-size:0.9rem}
